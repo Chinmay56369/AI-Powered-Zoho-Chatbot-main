@@ -79,6 +79,15 @@ frontend/
   - login screen starts the OAuth flow through [frontend/src/components/LoginGate.tsx](frontend/src/components/LoginGate.tsx)
   - conversation thread renders user and assistant messages in [frontend/src/components/ChatWindow.tsx](frontend/src/components/ChatWindow.tsx)
   - loading states include initial workspace restore and in-chat `Thinking…` feedback
+ 
+
+
+
+
+
+<img width="1465" height="718" alt="Screenshot 2026-05-28 at 11 57 37 AM" src="https://github.com/user-attachments/assets/dd037e1d-9095-4728-89c2-020e8a413d3c" />
+
+
 
 ### Backend flow
 
