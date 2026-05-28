@@ -125,16 +125,25 @@ pip install -e .[dev]
 Copy `.env.example` to `.env` and fill in:
 
 ```env
+APP_ENV=development
 SECRET_KEY=change-me
-ZOHO_CLIENT_ID=...
-ZOHO_CLIENT_SECRET=...
+BACKEND_BASE_URL=http://localhost:8000
+FRONTEND_ORIGIN=http://localhost:5173
+DATABASE_PATH=./zoho_assistant.db
+VITE_API_BASE_URL=http://localhost:8000
+
+ZOHO_CLIENT_ID=your-zoho-client-id
+ZOHO_CLIENT_SECRET=your-zoho-client-secret
 ZOHO_REDIRECT_URI=http://localhost:8000/auth/callback
 ZOHO_ACCOUNTS_BASE_URL=https://accounts.zoho.com
 ZOHO_PROJECTS_API_BASE_URL=https://projectsapi.zoho.com
-OPENAI_API_KEY=
-```
+ZOHO_PORTAL_ID=
+ZOHO_SCOPES=ZohoProjects.portals.READ,ZohoProjects.projects.READ,ZohoProjects.tasks.ALL,ZohoProjects.users.READ
 
-Run the API:
+OPENAI_API_KEY=
+OPENAI_MODEL=gpt-4.1-mini
+
+```
 
 ```bash
 uvicorn backend.app.main:app --reload
