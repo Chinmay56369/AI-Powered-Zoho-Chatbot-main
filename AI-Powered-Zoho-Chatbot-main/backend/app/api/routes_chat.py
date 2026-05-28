@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 MEMORY_CONTROL_MESSAGES = {"confirm", "cancel", "yes", "no", "approve", "stop"}
 
 
+@router.get("/health")
 @router.get("/api/health")
 async def health():
     return {"status": "ok"}
