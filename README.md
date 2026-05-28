@@ -79,6 +79,14 @@ frontend/
   - login screen starts the OAuth flow through [frontend/src/components/LoginGate.tsx](frontend/src/components/LoginGate.tsx)
   - conversation thread renders user and assistant messages in [frontend/src/components/ChatWindow.tsx](frontend/src/components/ChatWindow.tsx)
   - loading states include initial workspace restore and in-chat `Thinking…` feedback
+<<<<<<< HEAD
+=======
+ 
+## login page
+<img width="1458" height="708" alt="Screenshot 2026-05-28 at 11 58 01 AM" src="https://github.com/user-attachments/assets/a9ee01b2-0840-45f8-a621-1ca35efaf468" />
+
+
+>>>>>>> 60c1b4481aee0b57a67f5493aa76f83ffa4d5097
 
 ### Backend flow
 
@@ -120,6 +128,7 @@ pip install -e .[dev]
 Copy `.env.example` to `.env` and fill in:
 
 ```env
+<<<<<<< HEAD
 SECRET_KEY=change-me
 ZOHO_CLIENT_ID=...
 ZOHO_CLIENT_SECRET=...
@@ -130,6 +139,27 @@ OPENAI_API_KEY=
 ```
 
 Run the API:
+=======
+APP_ENV=development
+SECRET_KEY=change-me
+BACKEND_BASE_URL=http://localhost:8000
+FRONTEND_ORIGIN=http://localhost:5173
+DATABASE_PATH=./zoho_assistant.db
+VITE_API_BASE_URL=http://localhost:8000
+
+ZOHO_CLIENT_ID=your-zoho-client-id
+ZOHO_CLIENT_SECRET=your-zoho-client-secret
+ZOHO_REDIRECT_URI=http://localhost:8000/auth/callback
+ZOHO_ACCOUNTS_BASE_URL=https://accounts.zoho.com
+ZOHO_PROJECTS_API_BASE_URL=https://projectsapi.zoho.com
+ZOHO_PORTAL_ID=
+ZOHO_SCOPES=ZohoProjects.portals.READ,ZohoProjects.projects.READ,ZohoProjects.tasks.ALL,ZohoProjects.users.READ
+
+OPENAI_API_KEY=
+OPENAI_MODEL=gpt-4.1-mini
+
+```
+>>>>>>> 60c1b4481aee0b57a67f5493aa76f83ffa4d5097
 
 ```bash
 uvicorn backend.app.main:app --reload
@@ -184,6 +214,12 @@ Examples:
 - `Delete task #2 from the same project`
 - `Who has the most tasks this month in Website Redesign?`
 
+<<<<<<< HEAD
+=======
+<img width="1465" height="718" alt="Screenshot 2026-05-28 at 11 57 37 AM" src="https://github.com/user-attachments/assets/e2802189-bcab-4b20-9fc3-9f4d5113483e" />
+
+
+>>>>>>> 60c1b4481aee0b57a67f5493aa76f83ffa4d5097
 ## Known limitations
 
 - Natural-language parsing is intentionally lightweight and rule-driven for task mutation details, with optional OpenAI-assisted routing when `OPENAI_API_KEY` is provided.
