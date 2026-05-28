@@ -79,6 +79,11 @@ frontend/
   - login screen starts the OAuth flow through [frontend/src/components/LoginGate.tsx](frontend/src/components/LoginGate.tsx)
   - conversation thread renders user and assistant messages in [frontend/src/components/ChatWindow.tsx](frontend/src/components/ChatWindow.tsx)
   - loading states include initial workspace restore and in-chat `Thinking…` feedback
+ 
+## login page
+<img width="1458" height="708" alt="Screenshot 2026-05-28 at 11 58 01 AM" src="https://github.com/user-attachments/assets/a9ee01b2-0840-45f8-a621-1ca35efaf468" />
+
+
 
 ### Backend flow
 
@@ -183,6 +188,9 @@ Examples:
 - `Create a task called API Integration in the first project`
 - `Delete task #2 from the same project`
 - `Who has the most tasks this month in Website Redesign?`
+
+<img width="1465" height="718" alt="Screenshot 2026-05-28 at 11 57 37 AM" src="https://github.com/user-attachments/assets/e2802189-bcab-4b20-9fc3-9f4d5113483e" />
+
 
 ## Known limitations
 
