@@ -1,2 +1,0 @@
-"""Top-level backend package."""
-

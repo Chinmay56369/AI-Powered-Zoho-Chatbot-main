@@ -1,2 +1,0 @@
-"""API router package."""
-
