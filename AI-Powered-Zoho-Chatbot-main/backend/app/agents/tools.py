@@ -184,6 +184,17 @@ class ZohoProjectsToolkit:
     @staticmethod
     def _normalise_task(task: dict[str, Any], include_raw: bool = False) -> dict[str, Any]:
         owners = (task.get("details") or {}).get("owners", [])
+        normalised_owners: list[dict[str, str]] = []
+        for owner in owners:
+            if not isinstance(owner, dict):
+                continue
+            owner_name = str(owner.get("name") or "Unknown")
+            owner_id = owner.get("id")
+            payload = {"name": owner_name}
+            if owner_id not in (None, ""):
+                payload["id"] = str(owner_id)
+            normalised_owners.append(payload)
+
         payload = {
             "id": str(task.get("id") or task.get("id_string")),
             "name": task.get("name"),
@@ -194,9 +205,8 @@ class ZohoProjectsToolkit:
             "end_date": task.get("end_date"),
             "tasklist": task.get("tasklist"),
             "status": task.get("status"),
-            "owners": [{"id": str(owner["id"]), "name": owner["name"]} for owner in owners],
+            "owners": normalised_owners,
         }
         if include_raw:
             payload["raw"] = task
         return payload
-
