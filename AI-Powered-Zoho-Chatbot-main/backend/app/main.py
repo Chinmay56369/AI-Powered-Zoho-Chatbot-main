@@ -85,6 +85,6 @@ async def root():
         "name": settings.app_name,
         "auth_login": "/auth/login",
         "chat_endpoint": "/chat",
-        "health": "/api/health",
+        "health": "/health",
     }
 
